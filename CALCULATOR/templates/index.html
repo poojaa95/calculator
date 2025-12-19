@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="calculator">
+    <!-- Display -->
+    <input type="text" class="display" value="{{ result }}" readonly>
+
+    <!-- Input Fields -->
+    <form method="POST">
+        <input type="number" step="any" name="num1" placeholder="Number 1" value="{{ num1 }}">
+        <input type="number" step="any" name="num2" placeholder="Number 2 (optional)" value="{{ num2 }}">
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button name="op" value="C">C</button>
+            <button name="op" value="back">⌫</button>
+
+            <!-- Decimal Button -->
+            <button name="op" value=".">.</button>
+
+            <button name="op" value="+">+</button>
+            <button name="op" value="-">−</button>
+            <button name="op" value="*">×</button>
+            <button name="op" value="/">÷</button>
+            <button name="op" value="%">%</button>
+            <button name="op" value="sin">sin</button>
+            <button name="op" value="cos">cos</button>
+            <button name="op" value="tan">tan</button>
+            <button name="op" value="cot">cot</button>
+            <button name="op" value="sec">sec</button>
+            <button name="op" value="cosec">cosec</button>
+            <button name="op" value="sqrt">√</button>
+            <button name="op" value="sqr">x²</button>
+            <button name="op" value="pow">xʸ</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
